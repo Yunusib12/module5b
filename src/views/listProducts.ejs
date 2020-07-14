@@ -1,0 +1,16 @@
+<ul class="list-group list-group-flush">
+  <% products.forEach((product) =>{ %>
+  <li class="list-group-item">
+    <input
+      type="checkbox"
+      class="form-check-input"
+      id="<%= product._id %>"
+      name="<%= product.productName %>"
+      value="<%= product._id %>"
+    />
+    <label class="form-check-label" for="productName"
+      ><%= product.productName %> - $<%= product.price %></label
+    >
+  </li>
+  <% }); %>
+</ul>
